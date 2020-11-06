@@ -1,6 +1,7 @@
 #ifndef NOVICE_H
 #define NOVICE_H
 #include <string>
+#include <iostream>
 using namespace std;
 class NovicePlayer{
 public:
@@ -9,22 +10,32 @@ public:
 	NovicePlayer(int, string); // normal constructor
 	NovicePlayer(const NovicePlayer&); // copy constructor
 
+	NovicePlayer& setName(string);
+	//filter unexpected value and set level,
+	//attack, defense, max_hp, max_mp, lvup_exp base on the level
+	NovicePlayer& setLevel(int);
+	NovicePlayer& setHP(int);
+	NovicePlayer& setMP(int);
+	NovicePlayer& setExp(int);
+	NovicePlayer& setMoney(int);
+
 	string getName() const { return name; }
-	int getLevel() const { return level; }
-	int getAttack() const { return attack; }
+	int getLevel()   const { return level; }
+	int getAttack()  const { return attack; }
 	int getDefense() const { return defense; }
-	int getMax_hp() const { return max_hp; }
-	int getMax_mp() const { return max_mp; }
-	int getLvup_exp() const { return lvup_exp; }
+	int getMaxHP()   const { return max_hp; }
+	int getMaxMP()   const { return max_mp; }
+	int getLvupExp() const { return lvup_exp; }
+	int getHP()      const { return hp; }
+	int getMP()      const { return mp; }
+	int getExp()     const { return exp; }
+	int getMoney()   const{ return money; }
+
+	void printMembers(ostream&) const;
 
 protected:
-	NovicePlayer& setName(string);
-	NovicePlayer& setLevel(int);
-	NovicePlayer& setAttack(int);
-	NovicePlayer& setDefense(int);
-	NovicePlayer& setMax_hp(int);
-	NovicePlayer& setMax_mp(int);
-	NovicePlayer& setLvup_exp(int);
+	NovicePlayer& init();
+	NovicePlayer& init(const NovicePlayer&);
 
 	int level;  // The level of the player, >=1
 	int attack; // Attack of the player
