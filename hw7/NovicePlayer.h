@@ -3,6 +3,7 @@
 #include <string>
 #include <iostream>
 using namespace std;
+
 class NovicePlayer{
 public:
 	NovicePlayer(); // default constructor
@@ -10,10 +11,10 @@ public:
 	NovicePlayer(int, string); // normal constructor
 	NovicePlayer(const NovicePlayer&); // copy constructor
 
-	NovicePlayer& setName(string);
-	//filter unexpected value and set level,
-	//attack, defense, max_hp, max_mp, lvup_exp base on the level
+	//filter unexpected value and
+	//set protected data and hp based on the level
 	NovicePlayer& setLevel(int);
+	NovicePlayer& setName(string);
 	NovicePlayer& setHP(int);
 	NovicePlayer& setMP(int);
 	NovicePlayer& setExp(int);
@@ -34,9 +35,6 @@ public:
 	void printMembers(ostream&) const;
 
 protected:
-	NovicePlayer& init();
-	NovicePlayer& init(const NovicePlayer&);
-
 	int level;  // The level of the player, >=1
 	int attack; // Attack of the player
 	int defense;// Defense of the player
@@ -45,8 +43,8 @@ protected:
 	int lvup_exp; //Experience needed for leveling-up
 
 private:
+	int hp;  // Current HP of the player, range: [0,max_hp], initialized in setLevel()
 	string name; // Name of the player
-	int hp;  // Current HP of the player, range: [0,max_hp]
 	int mp;  // Current MP of the player, range: [0,max_mp]
 	int exp; // Cumulative experience of the player, >=0
 	         // It will not reset to zero after leveling-up
