@@ -1,6 +1,7 @@
 #include "NovicePlayer.h"
 #include "OrcPlayer.h"
 #include "KnightPlayer.h"
+#include "MagicianPlayer.h"
 #include <iostream>
 #include <fstream>
 using namespace std;
@@ -9,42 +10,30 @@ int main() {
 	ofstream file;
 	file.open("output.txt", ios::trunc);
 
-	KnightPlayer player1;
-	player1.printMembers(file);
-	player1.setExp(9487);
-	player1.printMembers(file);
-	file << "----------------------" << endl;
+	MagicianPlayer p1(10, "Cold");
+	file << "Initial: \n";
+	p1.printMembers(file);
 
-	KnightPlayer player2(10);
-	player2.printMembers(file);
-	player2.setHP(10000);
-	player2.setHP(-1);
-	player2.setMP(10000);
-	player2.setMP(-1);
-	player2.printMembers(file);
-	file << "----------------------" << endl;
+	p1.pray();
+	file << "\nPrayed\n";
+	p1.printMembers(file);
 
-	KnightPlayer player3(20, "Ray");
-	player3.printMembers(file);
-	player3.setHP(75);
-	player3.setMP(60);
-	player3.setMoney(87);
-	player3.printMembers(file);
-	file << "----------------------" << endl;
+	p1.setMP(p1.getMaxMP());
+	file << "\nSet MP to full\n";
+	p1.printMembers(file);
 
-	KnightPlayer player4(player3);
-	player4.printMembers(file);
-	player4.setName("Bob is God");
-	player4.printMembers(file);
-	file << "----------------------" << endl;
+	p1.pray();
+	file << "\nPrayed\n";
+	p1.printMembers(file);
 
-	KnightPlayer player5(30, "Cold");
-	player5.printMembers(file);
-	player5.setHP(100);
-	player5.setMP(200);
-	player5.printMembers(file);
-	player5.heal();
-	player5.printMembers(file);
+	p1.setHP(1);
+	p1.setMP(1);
+	file << "\nSet HP,MP to 1\n";
+	p1.printMembers(file);
+
+	p1.pray();
+	file << "\nPrayed\n";
+	p1.printMembers(file);
 
 	return 0;
 }

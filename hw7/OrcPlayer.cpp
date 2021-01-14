@@ -24,13 +24,13 @@ OrcPlayer::OrcPlayer(int lv, string inName){
 	setMoney(0);
 }
 
-OrcPlayer::OrcPlayer(const OrcPlayer& inOrc){
-	setLevel(inOrc.level);
-	setName(inOrc.getName());
-	setHP(inOrc.getHP()); //since hp may not be full, this line is required
-	setMP(inOrc.getMP());
-	setExp(inOrc.getExp());
-	setMoney(inOrc.getMoney());
+OrcPlayer::OrcPlayer(const OrcPlayer& in){
+	setLevel(in.level);
+	setName(in.getName());
+	setHP(in.getHP()); //since hp may not be full, this line is required
+	setMP(in.getMP());
+	setExp(in.getExp());
+	setMoney(in.getMoney());
 }
 
 OrcPlayer& OrcPlayer::setLevel(int lv) {
