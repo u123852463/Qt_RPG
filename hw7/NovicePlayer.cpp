@@ -4,31 +4,39 @@
 using namespace std;
 
 NovicePlayer::NovicePlayer() {
-	(*this).setLevel(1)
-		.setName("anonymous")
-		.init();
+	setLevel(1); //initialize protected data & hp
+	name = "anonymous";
+	mp = 0;
+	exp = 0;
+	money = 0;
 }
 
 NovicePlayer::NovicePlayer(int inLevel) {
-	(*this).setLevel(inLevel)
-		.setName("anonymous")
-		.init();
+	setLevel(inLevel); //initialize protected data & hp
+	name = "anonymous";
+	mp = 0;
+	exp = 0;
+	money = 0;
 }
 
 NovicePlayer::NovicePlayer(int inLevel, string inName) {
-	(*this).setLevel(inLevel)
-		.setName(inName)
-		.init();
+	setLevel(inLevel); //initialize protected data & hp
+	name = inName;
+	mp = 0;
+	exp = 0;
+	money = 0;
 }
 
 NovicePlayer::NovicePlayer(const NovicePlayer& inNovice) {
-	(*this).setLevel(inNovice.getLevel())
-		.setName(inNovice.getName())
-		.init(inNovice);
+	setLevel(inNovice.level); //initialize protected data & hp
+	name = inNovice.name;
+	mp = inNovice.mp;
+	exp = inNovice.exp;
+	money = inNovice.money;
 }
 
 NovicePlayer& NovicePlayer::setName(string input) {
-	this->name = input;
+	name = input;
 	return *this;
 }
 
@@ -41,12 +49,13 @@ NovicePlayer& NovicePlayer::setLevel(int lv) {
 		lv = 1;
 	}
 	level = lv;
-	hp = max_hp = 100 + 10 * lv;
+	max_hp = 100 + 10 * lv;
 	max_mp = 40 + 5 * lv;
 	attack = 20 + 5 * lv;
 	defense = 20 + 5 * lv;
 	lvup_exp = (int)ceil(pow(10, log2(lv + 1)));
 
+	hp = max_hp;//heal the player to full HP
 	return *this;
 }
 
@@ -65,7 +74,7 @@ NovicePlayer& NovicePlayer::setHP(int in) {
 
 NovicePlayer& NovicePlayer::setMP(int in) {
 	if (in >= 0 && in <= max_mp) {
-		hp = in;
+		mp = in;
 	}
 	else {
 		cerr << "Error: NovicePlayer::setMP\n";
@@ -103,24 +112,8 @@ NovicePlayer& NovicePlayer::setMoney(int in) {
 	return *this;
 }
 
-NovicePlayer& NovicePlayer::init() {
-	hp = max_hp;
-	mp = 0;
-	exp = 0;
-	money = 0;
-	return *this;
-}
-
-NovicePlayer& NovicePlayer::init(const NovicePlayer& inNovice) {
-	hp = inNovice.hp;
-	mp = inNovice.mp;
-	exp = inNovice.exp;
-	money = inNovice.money;
-	return *this;
-}
-
 void NovicePlayer::printMembers(ostream& out) const {
-	out << "Novice Player Member data:\n";
+	out << "Novice Player Data:\n";
 	out << "  Name    : " << name     << "\n";
 	out << "  Level   : " << level    << "\n";
 	out << "  Attack  : " << attack   << "\n";

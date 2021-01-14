@@ -1,0 +1,65 @@
+Initial: 
+Novice Player Data:
+  Name    : Cold
+  Level   : 10
+  Attack  : 110
+  Defense : 90
+  HP      : 270 / 270
+  MP      : 0 / 250
+  Exp     : 0 / 2881
+  Money   : 0
+
+Prayed
+Novice Player Data:
+  Name    : Cold
+  Level   : 10
+  Attack  : 110
+  Defense : 90
+  HP      : 220 / 270
+  MP      : 100 / 250
+  Exp     : 0 / 2881
+  Money   : 0
+
+Set MP to full
+Novice Player Data:
+  Name    : Cold
+  Level   : 10
+  Attack  : 110
+  Defense : 90
+  HP      : 220 / 270
+  MP      : 250 / 250
+  Exp     : 0 / 2881
+  Money   : 0
+
+Prayed
+Novice Player Data:
+  Name    : Cold
+  Level   : 10
+  Attack  : 110
+  Defense : 90
+  HP      : 170 / 270
+  MP      : 250 / 250
+  Exp     : 0 / 2881
+  Money   : 0
+
+Set HP,MP to 1
+Novice Player Data:
+  Name    : Cold
+  Level   : 10
+  Attack  : 110
+  Defense : 90
+  HP      : 1 / 270
+  MP      : 1 / 250
+  Exp     : 0 / 2881
+  Money   : 0
+
+Prayed
+Novice Player Data:
+  Name    : Cold
+  Level   : 10
+  Attack  : 110
+  Defense : 90
+  HP      : 1 / 270
+  MP      : 1 / 250
+  Exp     : 0 / 2881
+  Money   : 0
