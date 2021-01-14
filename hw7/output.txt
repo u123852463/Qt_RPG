@@ -1,0 +1,103 @@
+Novice Player Data:
+  Name    : anoymous
+  Level   : 1
+  Attack  : 50
+  Defense : 32
+  HP      : 175 / 175
+  MP      : 0 / 80
+  Exp     : 0 / 10
+  Money   : 0
+Novice Player Data:
+  Name    : anoymous
+  Level   : 16
+  Attack  : 100
+  Defense : 100
+  HP      : 260 / 260
+  MP      : 0 / 120
+  Exp     : 9487 / 12232
+  Money   : 0
+----------------------
+Novice Player Data:
+  Name    : anoymous
+  Level   : 10
+  Attack  : 140
+  Defense : 140
+  HP      : 400 / 400
+  MP      : 0 / 170
+  Exp     : 0 / 2881
+  Money   : 0
+Novice Player Data:
+  Name    : anoymous
+  Level   : 10
+  Attack  : 140
+  Defense : 140
+  HP      : 400 / 400
+  MP      : 0 / 170
+  Exp     : 0 / 2881
+  Money   : 0
+----------------------
+Novice Player Data:
+  Name    : Ray
+  Level   : 20
+  Attack  : 240
+  Defense : 260
+  HP      : 650 / 650
+  MP      : 0 / 270
+  Exp     : 0 / 24679
+  Money   : 0
+Novice Player Data:
+  Name    : Ray
+  Level   : 20
+  Attack  : 240
+  Defense : 260
+  HP      : 75 / 650
+  MP      : 60 / 270
+  Exp     : 0 / 24679
+  Money   : 87
+----------------------
+Novice Player Data:
+  Name    : Ray
+  Level   : 20
+  Attack  : 240
+  Defense : 260
+  HP      : 75 / 650
+  MP      : 60 / 270
+  Exp     : 0 / 24679
+  Money   : 87
+Novice Player Data:
+  Name    : Bob is God
+  Level   : 20
+  Attack  : 240
+  Defense : 260
+  HP      : 75 / 650
+  MP      : 60 / 270
+  Exp     : 0 / 24679
+  Money   : 87
+----------------------
+Novice Player Data:
+  Name    : Cold
+  Level   : 30
+  Attack  : 340
+  Defense : 380
+  HP      : 900 / 900
+  MP      : 0 / 370
+  Exp     : 0 / 89991
+  Money   : 0
+Novice Player Data:
+  Name    : Cold
+  Level   : 30
+  Attack  : 340
+  Defense : 380
+  HP      : 100 / 900
+  MP      : 200 / 370
+  Exp     : 0 / 89991
+  Money   : 0
+Novice Player Data:
+  Name    : Cold
+  Level   : 30
+  Attack  : 340
+  Defense : 380
+  HP      : 400 / 900
+  MP      : 50 / 370
+  Exp     : 0 / 89991
+  Money   : 0
